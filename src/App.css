@@ -1,38 +1,151 @@
+body {
+  background-color: #1b1b1b; /* Dark background retained */
+  color: #e0e0e0; /* Light gray text for readability */
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Modern, clean font */
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #252525; /* Slightly lighter dark gray for contrast */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7); /* Soft shadow for depth */
 }
 
-.App-link {
-  color: #61dafb;
+/* Logo Section */
+.logo h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #ff9900; /* Bright amber for the logo */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #f0f0f0; /* Soft white for better readability */
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #333333; /* Darker background on hover */
+  color: #ff9900; /* Amber hover effect for contrast */
+  border-radius: 5px;
+}
+
+/* Search Section */
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #444444; /* Dark border */
+  background-color: #2c2c2c; /* Dark input background */
+  color: #f5f5f5; /* Light text inside input */
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 200px;
+}
+
+.search-form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #4caf50; /* Calming green for button */
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+  background-color: #388e3c; /* Darker green on hover */
+}
+
+/* Buttons in forms */
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #4caf50; /* Consistent green for buttons */
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #388e3c; /* Darker green on hover */
+}
+
+/* Movie Grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
+}
+
+/* Pagination */
+.pagination {
+  margin: 2rem 0;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+
+.pagination button:hover {
+  background-color: #444444; /* Slight hover change */
+}
+
+/* Cast Grid */
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cast-card img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Soft shadow */
+}
+
+.cast-card p {
+  margin: 0.5rem 0;
+  color: #ff9900; /* Amber for text highlights */
 }
